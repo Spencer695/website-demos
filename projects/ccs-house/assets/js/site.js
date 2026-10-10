@@ -1,5 +1,13 @@
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+// Portfolio copy: show feedback without opening a checkout.
+document.querySelectorAll('[data-demo-order]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const status = document.getElementById(button.getAttribute('aria-controls'));
+    if (status) status.textContent = 'Demo complete! No order was placed and no payment was taken.';
+  });
+});
+
 // Mobile menu
 const toggle = document.querySelector('.nav-toggle');
 const nav = document.getElementById('site-nav');

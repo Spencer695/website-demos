@@ -1,6 +1,6 @@
 # CC's House website
 
-A plain HTML site with no build step. Upload this whole folder to Cloudflare as-is.
+Portfolio demonstration copy of the CC’s House website. The original business project on W: is unchanged.
 
 ## Pages
 - `index.html`: Home
@@ -10,7 +10,7 @@ A plain HTML site with no build step. Upload this whole folder to Cloudflare as-
 - `404.html`: shown for addresses that don't exist
 
 ## Still to fill in
-- **Order buttons**: each hat's button opens that hat's page on the current Square site (ccs-house.square.site), which already asks for head size and color. Once a Square buy link has been tested, swap it into the `Order this hat` link on each hat page.
+- **Order buttons**: demo-only buttons show local confirmation. This portfolio copy does not connect to Square, place orders, or take payments.
 - **Google Form**: the Contact page uses email for now. There's a note in `contact.html` showing where the form button goes.
 - **Domain**: once you have one, update the `og:image` line at the top of each page to the full address (this is the picture that shows when the link is shared).
 - **Social media**: there's a note in the footer where the links go.

@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap">
 <link rel="stylesheet" href="assets/css/style.css?v=202610081907">
 <script>document.documentElement.className = 'js';</script>
-<script src="assets/js/site.js?v=202610081907" defer></script>
+<script src="assets/js/site.js?v=20261010-demo" defer></script>
 </head>
 <body>
 <div class="portfolio-demo-bar" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:#25362f;color:#fff;font:12px/1.5 Arial,sans-serif;padding:11px 5vw;position:relative;z-index:10"><a href="../../index.html" style="color:#fff;text-decoration:underline;text-underline-offset:3px">← Back to projects</a><span>Portfolio demo · CC’s House</span></div>
@@ -72,9 +72,9 @@
           </ul>
         </div>
         <div class="buy-box">
-          <!-- For now this opens the hat's page on the current Square site. Swap in the Square buy link once it's set up. -->
-          <a class="btn btn-ink" href="https://ccs-house.square.site/product/egg-hat/4TC4KXLT7HUYZ7KES6PXWFJ7">Order this hat · $34.99</a>
-          <p class="buy-note">Opens our Square shop page, where you'll pick your band color, enter the head measurement in inches, and check out securely.</p>
+          <button class="btn btn-ink" type="button" data-demo-order aria-controls="demo-order-status">Order this hat · Demo</button>
+          <p class="buy-note">Portfolio demo only. Ordering and payments are disabled.</p>
+          <p class="buy-note" id="demo-order-status" role="status" aria-live="polite"></p>
         </div>
         <dl class="specs">
           <dt>Sizes</dt><dd>Baby, kids &amp; adult, made to your head measurement</dd>
