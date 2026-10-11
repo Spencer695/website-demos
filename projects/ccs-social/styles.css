@@ -175,3 +175,4 @@ footer.bottom{padding:25px 5vw 35px;border-top:1px solid var(--line);display:fle
 @media(max-width:640px){.posts{grid-template-columns:1fr;max-width:440px}.week{grid-template-columns:repeat(2,1fr)}.week li{min-height:0}.reel-notes{grid-template-columns:1fr}.email-meta{grid-template-columns:1fr}.email-body{padding:22px 20px}.email-hero{height:220px}.email-grid{gap:8px;font-size:12px}}
 @media(max-width:480px){.measure{grid-template-columns:1fr}.lede{font-size:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reel-frame,.reel-frame img,.reel-progress i{animation:none}.f1{opacity:1}.reel-progress i{width:25%}}
+.inline-link{color:var(--accent);font-weight:650;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
