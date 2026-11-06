@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../ccs-social/styles.css">
-<link rel="stylesheet" href="styles.css?v=custom-motion-1">
+<link rel="stylesheet" href="styles.css?v=tape-2">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -29,11 +29,12 @@
   <section id="reels" class="block">
     <div class="block-head">
       <h2>Reels</h2>
-      <p>Original blue artwork, custom yarn sweeps, star reveals, and a visual sizing walkthrough. Both Reels are vertical and work with the sound off. Press play to watch.</p>
+      <p>Original blue artwork, custom yarn sweeps, star reveals, and a visual sizing walkthrough. Both Reels play automatically on a silent loop.</p>
+      <button class="reel-motion-toggle" type="button" data-reel-toggle>Pause animations</button>
     </div>
     <div class="reels">
       <figure class="reel-card">
-        <div class="reel-phone"><video controls muted playsinline preload="metadata" aria-label="Which breakfast hat are you?" poster="media/reel-breakfast-poster-custom.jpg" width="1080" height="1920"><source src="media/reel-breakfast-custom.mp4" type="video/mp4">Your browser can’t play this video.</video></div>
+        <div class="reel-phone"><video autoplay muted loop playsinline webkit-playsinline preload="auto" controlslist="nofullscreen nodownload noremoteplayback" disablepictureinpicture disableremoteplayback aria-label="Which breakfast hat are you?" poster="media/reel-breakfast-poster-custom.jpg?v=tape-2" width="1080" height="1920"><source src="media/reel-breakfast-custom.mp4?v=tape-2" type="video/mp4">Your browser can’t play this video.</video></div>
         <figcaption>
           <p class="reel-meta"><span class="type reel-t">Reel</span> 12 seconds · Monday in the <a href="../ccs-social/#week">week plan</a></p>
           <h3>Which breakfast hat are you?</h3>
@@ -44,7 +45,7 @@
         </figcaption>
       </figure>
       <figure class="reel-card">
-        <div class="reel-phone"><video controls muted playsinline preload="metadata" aria-label="How sizing works" poster="media/reel-sizing-poster-custom.jpg" width="1080" height="1920"><source src="media/reel-sizing-custom.mp4" type="video/mp4">Your browser can’t play this video.</video></div>
+        <div class="reel-phone"><video autoplay muted loop playsinline webkit-playsinline preload="auto" controlslist="nofullscreen nodownload noremoteplayback" disablepictureinpicture disableremoteplayback aria-label="How sizing works" poster="media/reel-sizing-poster-custom.jpg?v=tape-2" width="1080" height="1920"><source src="media/reel-sizing-custom.mp4?v=tape-2" type="video/mp4">Your browser can’t play this video.</video></div>
         <figcaption>
           <p class="reel-meta"><span class="type reel-t">Reel</span> 18 seconds · Saturday in the <a href="../ccs-social/#week">week plan</a></p>
           <h3>How sizing works</h3>
@@ -154,5 +155,6 @@
 </main>
 
 <footer class="bottom"><span>Spencer · Portfolio</span><a href="../../">← All projects</a></footer>
+<script src="reels.js?v=tape-2" defer></script>
 </body>
 </html>
