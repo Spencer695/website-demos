@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-portfolio-page="home">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Spencer · Websites & Social Content</title>
@@ -7,12 +7,14 @@
   <meta name="theme-color" content="#fbf7ee">
   <link rel="stylesheet" href="styles.css?v=hero-4">
   <script src="portfolio.js?v=color-3" defer></script>
+<link rel="stylesheet" href="dark-mode.css?v=1">
+<script src="theme-switch.js?v=1"></script>
 </head>
 <body id="top">
 <a class="skip" href="#projects">Skip to projects</a>
 <header class="site-header">
   <a class="brand" href="./" aria-label="Spencer, portfolio home"><span class="brand-mark" aria-hidden="true">S<span>✦</span></span><span>Spencer<small>Design & content</small></span></a>
-  <nav aria-label="Main navigation"><a href="#projects">The work</a></nav>
+  <div class="theme-actions"><nav aria-label="Main navigation"><a href="#projects">The work</a></nav><button class="theme-switch" type="button" role="switch" aria-label="Dark mode" aria-checked="false" title="Toggle dark mode" data-theme-switch hidden><span class="theme-sun" aria-hidden="true">☀︎</span><span class="theme-moon" aria-hidden="true">☾</span></button></div>
 </header>
 <main>
   <section class="hero" aria-labelledby="hero-title">

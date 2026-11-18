@@ -1,0 +1,188 @@
+:root {
+  --theme-track: #e9e4f3;
+  --theme-border: #bdafce;
+  --theme-icon: #574a6a;
+  --theme-thumb: #fffaf0;
+  --theme-selected: #583812;
+  --theme-focus: #784c99;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --theme-track: #273750;
+  --theme-border: #62708a;
+  --theme-icon: #d6dced;
+  --theme-thumb: #d9c8f2;
+  --theme-selected: #292044;
+  --theme-focus: #e0c7ff;
+}
+
+.theme-actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 2vw, 18px);
+  margin-inline-start: auto;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  flex: 0 0 72px;
+  width: 72px;
+  height: 44px;
+  padding: 5px;
+  border: 0;
+  border-radius: 30px;
+  background: transparent;
+  color: var(--theme-icon);
+  cursor: pointer;
+}
+.theme-switch[hidden] { display: none; }
+.theme-switch::before {
+  content: "";
+  position: absolute;
+  inset: 6px 1px;
+  border: 1px solid var(--theme-border);
+  border-radius: 20px;
+  background: var(--theme-track);
+}
+.theme-switch::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--theme-thumb);
+  box-shadow: 0 1px 3px #0c17283d;
+  transition: transform 180ms ease;
+}
+.theme-switch[aria-checked="true"]::after { transform: translateX(32px); }
+.theme-switch span {
+  position: relative;
+  z-index: 1;
+  font: 19px/1 "Segoe UI Symbol", system-ui, sans-serif;
+}
+.theme-switch[aria-checked="false"] .theme-sun,
+.theme-switch[aria-checked="true"] .theme-moon { color: var(--theme-selected); }
+.theme-switch:focus-visible { outline: 3px solid var(--theme-focus); outline-offset: 2px; }
+.theme-switch:hover::before { border-color: currentColor; }
+
+.portfolio-demo-bar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px 16px;
+  padding: 3px 5vw;
+  background: #25362f;
+  color: #fff;
+  font: 12px/1.5 Arial, sans-serif;
+}
+.portfolio-demo-bar > a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.portfolio-demo-bar .theme-actions { flex-wrap: wrap; justify-content: flex-end; }
+.portfolio-demo-bar .theme-switch { --theme-focus: #e0c7ff; }
+.theme-actions .back { white-space: nowrap; }
+
+@media (max-width: 390px) {
+  [data-portfolio-page="home"] .site-header,
+  [data-portfolio-page="project"] header.top { gap: 10px; flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-switch::after { transition: none; }
+}
+
+/* Portfolio and case studies use the same deep navy palette. */
+[data-theme="dark"]:is([data-portfolio-page="home"], [data-portfolio-page="project"]) {
+  --paper: #131c2b;
+  --ink: #f3eff9;
+  --muted: #b7c2d6;
+  --line: #3d4960;
+  --white: #1d293d;
+  --accent: #ffad94;
+}
+[data-theme="dark"][data-portfolio-page="home"] :is(.little-star, .title-dot, .hero h1 em, .section-heading h2 span, .brand-mark > span) { color: var(--accent); }
+[data-theme="dark"][data-portfolio-page="home"] :is(.brand-mark, .hero-sticker) { color: #181a38; }
+[data-theme="dark"][data-portfolio-page="home"] .primary { color: #18263b; background: #ddd0f3; }
+[data-theme="dark"][data-portfolio-page="home"] .primary:hover { background: #fff3d7; }
+[data-theme="dark"][data-portfolio-page="home"] .hero-post { background: #28354b; border-color: var(--line); }
+[data-theme="dark"][data-portfolio-page="home"] .art-outline { border-color: #655d82; }
+[data-theme="dark"][data-portfolio-page="home"] .disciplines { background: #29263d; border-color: #4d4267; }
+[data-theme="dark"][data-portfolio-page="home"] .disciplines li span { color: #d6b6f3; }
+[data-theme="dark"][data-portfolio-page="home"] .disciplines li:nth-child(2) span { color: #f6ab96; }
+[data-theme="dark"][data-portfolio-page="home"] .disciplines li:nth-child(3) span { color: #a8e3bf; }
+[data-theme="dark"][data-portfolio-page="home"] .disciplines li:nth-child(4) span { color: #f5d68d; }
+[data-theme="dark"][data-portfolio-page="home"] :is(.section-heading .eyebrow, .project-label) { color: var(--muted); }
+[data-theme="dark"][data-portfolio-page="home"] :is(.filter, .project, .tags li, .view-link) { border-color: var(--line); }
+[data-theme="dark"][data-portfolio-page="home"] :is(.filter:hover, .tags li) { background: #2a3650; }
+[data-theme="dark"][data-portfolio-page="home"] .filter.is-active { color: #201936; background: #d9c8f2; border-color: #d9c8f2; }
+[data-theme="dark"][data-portfolio-page="home"] .project { box-shadow: 0 6px 12px #090f1b55; }
+[data-theme="dark"][data-portfolio-page="home"] .view-link > span { color: #f9d2c7; background: #4e3341; }
+[data-theme="dark"][data-portfolio-page="home"] .view-link:hover > span { background: #624251; }
+[data-theme="dark"][data-portfolio-page="home"] :is(.social-preview, .community-preview, .pet-preview, .sp-story span) { color: #102f47; }
+[data-theme="dark"][data-portfolio-page="home"] .skip:focus { background: var(--white); }
+[data-theme="dark"][data-portfolio-page="home"] :is(a, button):focus-visible { outline-color: var(--theme-focus); }
+
+[data-theme="dark"][data-portfolio-page="project"] .intro .eyebrow,
+[data-theme="dark"][data-portfolio-page="project"] .block-head h2::after { color: var(--accent); }
+[data-theme="dark"][data-portfolio-page="project"] :is(.block-head h2, .reel-card h3) { color: var(--ink); }
+[data-theme="dark"][data-portfolio-page="project"] :is(.block, .top .back, .jump a, .reel-card, .thread, .dm, .dm header, .thread-post, .comments > li) { border-color: var(--line); }
+[data-theme="dark"][data-portfolio-page="project"] :is(.jump a, .reel-card, .reel-motion-toggle, .shots li, .totals li, .week li, .thread, .dm, .skip:focus) { background: var(--white); color: var(--ink); }
+[data-theme="dark"][data-portfolio-page="project"] :is(.top .back:hover, .jump a:hover, .reel-motion-toggle:hover, .thread-post, .bubbles .in) { background: #2b3b54; }
+[data-theme="dark"][data-portfolio-page="project"] .thread-post span { color: var(--muted); }
+[data-theme="dark"][data-portfolio-page="project"] .bubbles .out { background: #235377; }
+[data-theme="dark"][data-portfolio-page="project"] :is(.intro .concept-note, .voice, .rules article:nth-child(2)) { background: #342949; color: #e9dcf7; }
+[data-theme="dark"][data-portfolio-page="project"] :is(.why, .saved article, .sizing-transcript, .measure article, .rules article:nth-child(4)) { background: #21372f; border-color: #3e6152; }
+[data-theme="dark"][data-portfolio-page="project"] .rules article { background: var(--white); border-color: var(--line); }
+[data-theme="dark"][data-portfolio-page="project"] .rules article:nth-child(3) { background: #42332a; }
+[data-theme="dark"][data-portfolio-page="project"] :is(.type.reel-t, .status.escalated) { color: #ffd0c4; background: #51363b; }
+[data-theme="dark"][data-portfolio-page="project"] .ig-label { color: #56656c; }
+[data-theme="dark"][data-portfolio-page="project"] .ig-label .type.reel-t { color: #a14231; background: #fbe3dc; }
+
+/* The crochet demo already uses a night sky for its brand photography. */
+[data-theme="dark"][data-portfolio-page="crochet"] {
+  --cream: #101e31;
+  --ink: #fff4e4;
+  --ink-soft: #bacbe1;
+  --pumpkin-text: #ffb480;
+  --cloud-soft: #243a55;
+  --line: #405572;
+  --shadow: 0 18px 40px -18px #020813;
+}
+[data-theme="dark"][data-portfolio-page="crochet"] .section-alt { background: #182941; }
+[data-theme="dark"][data-portfolio-page="crochet"] :is(.card, .info-card, .buy-box) { background: #1e314a; }
+[data-theme="dark"][data-portfolio-page="crochet"] .card.soon { border-color: var(--line); }
+[data-theme="dark"][data-portfolio-page="crochet"] :is(.btn-gold, .skip:focus, .tag),
+[data-theme="dark"][data-portfolio-page="crochet"] .steps li::before { color: #10233b; }
+[data-theme="dark"][data-portfolio-page="crochet"] :is(.btn-ink, .features .icon) { color: #10233b; background: #bfd7ee; }
+[data-theme="dark"][data-portfolio-page="crochet"] .btn-ink:hover { background: #e1ecfb; }
+[data-theme="dark"][data-portfolio-page="crochet"] :focus-visible { outline-color: #f6d989; }
+
+/* Keep the pet demo's lime accent over evergreen surfaces. */
+[data-theme="dark"][data-portfolio-page="pets"] {
+  --cream: #101d18;
+  --white: #1c2d25;
+  --ink: #f1f6eb;
+  --muted: #bbccbe;
+  --line: #40594a;
+  --green: #235c43;
+  --deep: #0a1711;
+  --pet-surface: #23382c;
+  --pet-raised: #304a3b;
+}
+[data-theme="dark"][data-portfolio-page="pets"] :is(.header, #mobile-nav, .care-strip, .groom-menu, dialog, .booking-option, .field input, .field select, .time-button, .quantity-controls button, .photo-caption, .photo-label, .product-tag) { background: var(--white); }
+[data-theme="dark"][data-portfolio-page="pets"] :is(.hero-copy, .neighborhood-section, .strip-number, .review-list) { background: var(--pet-surface); }
+[data-theme="dark"][data-portfolio-page="pets"] :is(.hero-copy > p, .store-button small) { color: var(--muted); }
+[data-theme="dark"][data-portfolio-page="pets"] :is(.icon-button:hover, .service-row:hover, .booking-option.selected) { background: var(--pet-raised); }
+[data-theme="dark"][data-portfolio-page="pets"] :is(.filter-tabs button.active, .time-button.selected) { background: var(--lime); color: #172c20; border-color: var(--lime); }
+[data-theme="dark"][data-portfolio-page="pets"] .time-button:disabled { background: #26342d; color: #a5b3a8; }
+[data-theme="dark"][data-portfolio-page="pets"] :is(.cart-button span, .photo-caption a, .confirmation-mark, .skip-link:focus, .map-label) { color: #203f31; }
+[data-theme="dark"][data-portfolio-page="pets"] .caption-icon { color: var(--lime); }
+[data-theme="dark"][data-portfolio-page="pets"] :is(#search, .info-body a) { color: var(--lime); }
+[data-theme="dark"][data-portfolio-page="pets"] :is(.field input, .field select, .review-list > div, .faq-list details) { border-color: var(--line); }
+[data-theme="dark"][data-portfolio-page="pets"] .form-error { color: #ffb5a7; }
