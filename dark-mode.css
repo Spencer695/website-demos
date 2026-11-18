@@ -112,11 +112,6 @@
 [data-theme="dark"][data-portfolio-page="home"] .primary:hover { background: #fff3d7; }
 [data-theme="dark"][data-portfolio-page="home"] .hero-post { background: #28354b; border-color: var(--line); }
 [data-theme="dark"][data-portfolio-page="home"] .art-outline { border-color: #655d82; }
-[data-theme="dark"][data-portfolio-page="home"] .disciplines { background: #29263d; border-color: #4d4267; }
-[data-theme="dark"][data-portfolio-page="home"] .disciplines li span { color: #d6b6f3; }
-[data-theme="dark"][data-portfolio-page="home"] .disciplines li:nth-child(2) span { color: #f6ab96; }
-[data-theme="dark"][data-portfolio-page="home"] .disciplines li:nth-child(3) span { color: #a8e3bf; }
-[data-theme="dark"][data-portfolio-page="home"] .disciplines li:nth-child(4) span { color: #f5d68d; }
 [data-theme="dark"][data-portfolio-page="home"] :is(.section-heading .eyebrow, .project-label) { color: var(--muted); }
 [data-theme="dark"][data-portfolio-page="home"] :is(.filter, .project, .tags li, .view-link) { border-color: var(--line); }
 [data-theme="dark"][data-portfolio-page="home"] :is(.filter:hover, .tags li) { background: #2a3650; }
